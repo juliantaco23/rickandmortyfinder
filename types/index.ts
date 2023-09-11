@@ -7,3 +7,8 @@ export interface CustomButtomProps {
     MouseEventHandler<HTMLButtonElement>;
     btnType?: "button"|"submit";
 }
+
+export interface SearchCharacterProps {
+    character: string;
+    setCharacter: (character: string) => void;
+}
