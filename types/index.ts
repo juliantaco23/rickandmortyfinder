@@ -17,6 +17,8 @@ export interface SearchCharacterProps {
 }
 
 export interface CharacterProps {
+    location?: {name: string};
+    created?: string;
     id: number;
     name: string;
     status: string;

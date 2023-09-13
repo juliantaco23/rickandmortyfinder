@@ -1,4 +1,4 @@
-import { Hero, SearchBar, CharacterCard } from '@/components'
+import { Hero, CharacterCard } from '@/components'
 import { fetchCharacters } from '@/utils'
 import Link from 'next/link';
 
@@ -15,10 +15,6 @@ export default async function Home() {
           <div className='home__text-container'>
             <h1 className='text-4xl font-extrabold'>Characters Catalogue</h1>
             <p>Explore the characters you might like</p>
-          </div>
-
-          <div className='home__filters'>
-            <SearchBar />
           </div>
         </div>
 

@@ -10,12 +10,12 @@ const Hero = () => {
   return (
     <div className="hero">
         <div className="flex-1 pt-36 padding-x">
-            <h1 className="hero__title">
-                Lorem ipsum 
+            <h1 className="hero__title w-full">
+                Rick and Morty
             </h1>
 
-            <p className="hero__subtitle">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi animi quo nam, harum amet nulla dolore dolores! Expedita fugiat blanditiis cumque obcaecati ea eius praesentium repudiandae! Corporis quae perferendis velit!
+            <p className="hero__subtitle w-full">
+              This is a site develop for: Julian Tamara as a technical test for Auco.ai in here you can explore diferent characters from the tv series rick and Morty, also you can find in the personal section a video of personal objectives and presentation
             </p>
 
             <CustomButtom 

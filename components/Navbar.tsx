@@ -16,13 +16,13 @@ const Navbar = () => {
           className="object-contain"
         />
       </Link>
-      <Link href='/personal'>
+      <a href='https://drive.google.com/file/d/1X9P0vIUpddZ_Bfek1_7mveZj0XIBa5Jy/view?usp=sharing'>
         <CustomButtom
           title="Personal"
           btnType="button"
           containerStyles="text-primary-blue rounded-full bg-white min-w-[130px]"
         />
-      </Link>
+      </a>
       </nav>
     </header>
   )
