@@ -1,7 +1,10 @@
-import { Hero, SearchBar } from '@/components'
-import Image from 'next/image'
+import { Hero, SearchBar, CharacterCard } from '@/components'
+import { fetchCharacters } from '@/utils'
 
-export default function Home() {
+export default async function Home() {
+  const allCharacters = await fetchCharacters();
+  const isDataEmpty = !allCharacters || allCharacters.length < 1 || !Array.isArray(allCharacters);
+  
   return (
     <main className="overflow-hidden">
       <Hero/>
@@ -15,6 +18,25 @@ export default function Home() {
         <div className='home__filters'>
           <SearchBar/>
         </div>
+
+        {!isDataEmpty ? (
+          <section>
+            <div className='home__characters-wrapper'>
+              {allCharacters?.map((character) => (
+                <CharacterCard  character={character}/>
+              ))}
+            </div>
+          </section>
+        ): (
+          <div className='home__error-container'>
+            <h2 className='text-black text-xl font-bold'>
+              Ooops, no results found
+            </h2>
+            <p>
+              {allCharacters?.mesage}
+            </p>
+          </div>
+        )}
       </div>
     </main>
   )

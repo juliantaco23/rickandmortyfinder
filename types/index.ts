@@ -12,3 +12,13 @@ export interface SearchCharacterProps {
     character: string;
     setCharacter: (character: string) => void;
 }
+
+export interface CharacterProps {
+    id: number;
+    name: string;
+    status: string;
+    species: string;
+    type: string;
+    gender: string;
+    image: string;
+}
