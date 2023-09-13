@@ -10,5 +10,5 @@ export {
     Navbar,
     SearchBar,
     SearchCharacter,
-    CharacterCard
+    CharacterCard,
 }

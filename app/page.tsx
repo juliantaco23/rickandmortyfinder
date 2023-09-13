@@ -1,5 +1,6 @@
 import { Hero, SearchBar, CharacterCard } from '@/components'
 import { fetchCharacters } from '@/utils'
+import Link from 'next/link';
 
 export default async function Home() {
   const allCharacters = await fetchCharacters();
@@ -22,7 +23,7 @@ export default async function Home() {
         {!isDataEmpty ? (
           <section>
             <div className='home__characters-wrapper'>
-              {allCharacters?.map((character) => (
+              {allCharacters?.slice(0,12).map((character) => (
                 <CharacterCard character={character} />
               ))}
             </div>

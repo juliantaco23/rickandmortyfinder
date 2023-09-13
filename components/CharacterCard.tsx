@@ -1,9 +1,10 @@
 'use client'
-
-import { useState } from "react";
 import Image from "next/image";
-import { CharacterProps } from "@/types";
 import CustomButtom from "./CustomButtom";
+import { useState } from "react";
+import { CharacterProps } from "@/types";
+import Link from 'next/link';
+
 
 interface CharacterCardProps {
     character: CharacterProps;
@@ -32,7 +33,7 @@ const CharacterCard = ({ character }: CharacterCardProps) => {
                 <div className="relative rounded-full">
                     <Image src={imageSrc} alt="Status Image" width={20} height={20} />
                 </div>
-                <p className="text-[22px] font-extrabold mt-0">
+                <p className="text-[22px] font-extrabold mt-0 capitalize">
                     {character.status}
                 </p>
             </div>
@@ -47,15 +48,17 @@ const CharacterCard = ({ character }: CharacterCardProps) => {
             </div>
 
             <div className="relative flex w-full mt-2 mb-6">
-                <div className="character-card__btn-container">
-                    <CustomButtom
-                        title="View More"
-                        containerStyles="w-full py-[16px] rounded-full bg-primary-blue"
-                        textStyles="text-white text-[14px] leading-[17px] font-bold"
-                        rightIcon="/right-arrow.svg"
-                        handleClick={() => setIsOpen(true)}
-                    />
-                </div>
+                <Link href={`/details/${character.id}`}>
+                    <div className="character-card__btn-container">
+                        <CustomButtom
+                            title="View More"
+                            containerStyles="w-full py-[16px] rounded-full bg-primary-blue"
+                            textStyles="text-white text-[14px] leading-[17px] font-bold"
+                            rightIcon="/right-arrow.svg"
+                        />
+                    </div>
+                
+                </Link>
             </div>
         </div>
     );
