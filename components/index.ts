@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import SearchBar from './SearchBar';
 import SearchCharacter from './SearchCharacter';
 import CharacterCard from './CharacterCard';
+import CharacterDetails from './CharacterDetails';
 export {
     Hero,
     CustomButtom,
@@ -11,4 +12,5 @@ export {
     SearchBar,
     SearchCharacter,
     CharacterCard,
+    CharacterDetails
 }

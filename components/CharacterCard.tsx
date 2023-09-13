@@ -1,7 +1,6 @@
 'use client'
 import Image from "next/image";
 import CustomButtom from "./CustomButtom";
-import { useState } from "react";
 import { CharacterProps } from "@/types";
 import Link from 'next/link';
 
@@ -11,7 +10,6 @@ interface CharacterCardProps {
 }
 
 const CharacterCard = ({ character }: CharacterCardProps) => {
-    const [isOpen, setIsOpen] = useState(false);
 
     // Determina el src de la imagen basado en character.status
     const imageSrc =

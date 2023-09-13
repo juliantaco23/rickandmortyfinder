@@ -16,11 +16,13 @@ const Navbar = () => {
           className="object-contain"
         />
       </Link>
-      <CustomButtom
-        title="Personal"
-        btnType="button"
-        containerStyles="text-primary-blue rounded-full bg-white min-w-[130px]"
-      />
+      <Link href='/personal'>
+        <CustomButtom
+          title="Personal"
+          btnType="button"
+          containerStyles="text-primary-blue rounded-full bg-white min-w-[130px]"
+        />
+      </Link>
       </nav>
     </header>
   )

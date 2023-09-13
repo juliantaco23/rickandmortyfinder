@@ -1,9 +1,11 @@
 import React from 'react'
+import { CharacterDetails } from '@/components'
+import { fetchSingleCharacter } from '@/utils'
 
-const CharacterDetails = ({ params }: { params: { id: number } }) => {
+
+export default async function Details({ params }: { params: { id: number } }) {
+  const character = await fetchSingleCharacter(params.id);
   return (
-    <div>{params.id}</div>
+    <CharacterDetails character={character}></CharacterDetails>
   )
 }
-
-export default CharacterDetails
